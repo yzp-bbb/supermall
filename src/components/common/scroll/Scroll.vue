@@ -42,9 +42,13 @@
       this.scroll.on('pullingUp', () => {
        this.$emit('pullingUp')
       })
+    //4.完成上拉加载更多
+      
     },
     methods:{
-
+        finishPullUp(){
+          this.scroll.finishPullUp()
+        }
     }
   }
 </script>

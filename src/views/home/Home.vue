@@ -121,6 +121,9 @@
         getHomeGoods(type,page).then(res => {
          this.goods[type].list.push(...res.data.list)
         this.goods[type].page += 1
+
+        //继续上拉加载更多
+        this.$refs.scroll.finishPullUp()
         })
       },
 
